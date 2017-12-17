@@ -42,7 +42,6 @@
               {{form.neighborhood.errors}}
               {{form.gate_no.errors}}   
         </div>
-        <input type="hidden" name="next" value="{{ next }}" required autofocus/>
         {% for field in form %}
           <p>
             {{ field.label_tag }}<br>

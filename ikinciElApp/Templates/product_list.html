@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <ul>
+    <h1>Product List</h1>
+      {% for pro in data %}
+      	<div class="container">
+      		<li>Name: {{pro.product_name}} - {{pro.product_price}}
+            <a href="{% url 'basket' pro.id %}" class="btn btn-primary btn-sm" role="button">Add To Basket</a>
+            <a href="{% url 'pdf' pro.id%}" class="btn btn-primary btn-sm" role="button">PRODUCT PDF</a>
+            <a href="{% url 'pdf2' %}" class="btn btn-primary btn-sm" role="button">Users PDF</a>
+      		</li> 
+      	</div>
+      {% empty %}
+      	<li> No Product </li>
+      {% endfor %}
+
+    </ul>
+{% endblock %}

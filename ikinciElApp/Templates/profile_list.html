@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <ul>
+    <h1>PROFİLE </h1>
+      {% for pro in data %}
+      	<div class="container">
+      		<li>
+              User: {{pro.user}} <br>
+              Name: {{pro.name}} <br>
+              Last_name: {{pro.last_name}}<br>
+              Email: {{pro.e_mail}} <br>
+              Phone: {{pro.phone_number}} <br>
+              Birthdate: {{pro.birthdate}} <br>
+              Gender: {{pro.gender}} <br> 
+      		</li> 
+      	</div>
+      {% empty %}
+      	<li> No Product </li>
+      {% endfor %}
+
+    </ul>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <ul>
+    <h1>Basket List</h1>
+      {% for basket in data %}
+      	<div class="container">
+      		<li>Product: {{basket.product_id.product_name}} - {{basket.product_id.product_price}}
+            <a href="{% url 'buy' basket.product_id %}" class="btn btn-primary btn-sm" role="button">BUY</a>
+      		</li> 
+      	</div>
+
+      {% empty %}
+      	<li> No Product </li>
+      {% endfor %}
+    </ul>
+{% endblock %}
