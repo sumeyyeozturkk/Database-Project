@@ -1,4 +1,4 @@
-Django == 1.9
+Django == 1.11.28
 psycopg2
 Pillow
 django-cleanup
